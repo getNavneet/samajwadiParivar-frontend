@@ -32,27 +32,20 @@ onClick={() => handleButtonClick()}
   Samajwadi member card
   </Button>
 </div>
-
-
 </div>
 
 
-<div className="w-4/4 md:w-3/4 mx-auto  px-4   flex justify-center items-center">
-  <img src={poster} alt="Poster" className="max-w-full h-auto rounded-lg border-gray-300 border-2 shadow-lg " />
-</div>
+
 <AllCardsGrid/>
 
 
 { templateId &&(
-
-  
 <FormComponent/>
-
 )
-
-
 }
-
+<div className="w-4/4 md:w-3/4 mx-auto  px-4 pt-14  flex justify-center items-center">
+  <img src={poster} alt="Poster" className="max-w-full h-auto rounded-lg border-gray-300 border-2 shadow-lg " />
+</div>
 
 
 </>

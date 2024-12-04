@@ -1,0 +1,30 @@
+/* Custom styles for slick dots (pagination) */
+.slick-dots {
+    bottom: -20px; /* Position dots inside the carousel */
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px; /* Adjust size of the dots */
+    color: rgba(63, 38, 38, 0.426);    /* Change color of inactive dots */
+    opacity: 0.5;    /* Make the dots semi-transparent */
+  }
+  
+  
+  .slick-dots li.slick-active button:before {
+    color: #155900;  /* Change color of the active dot */
+    opacity: 1;      /* Make active dot fully opaque */
+  }
+  
+  /* Optional: Adjust spacing between dots */
+  .slick-dots li {
+    margin: 0 2px;
+  }
+  
+   /* Customize the arrow icon */
+   .slick-prev:before,
+   .slick-next:before {
+     font-size: 0px; /* Increase the size of the arrow icon */
+     color: rgb(0, 150, 180);    /* Set the color of the arrow icon */
+     opacity: 1;      /* Ensure full opacity */
+   }
+  

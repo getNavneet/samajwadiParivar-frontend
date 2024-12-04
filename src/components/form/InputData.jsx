@@ -48,6 +48,7 @@ useEffect(() => {
   // Function to handle image download
   const handleDownload = async () => {
     try {
+      setloading(false)
       // Fetch the image as a Blob
       const response = await fetch(generatedCardUrl);
       const blob = await response.blob();
@@ -85,8 +86,6 @@ useEffect(() => {
        if(templateId=='member'){
         setReq("member");  
        }
-
-
       }
     }, [templateId]);
 
@@ -332,7 +331,7 @@ const [error, setError] = useState("");
             <div className="loader  m-4"></div> 
           </div>
         )}
-
+</form>
   { generatedCardUrl && (
    <div
    ref={cardRef}
@@ -346,19 +345,17 @@ const [error, setError] = useState("");
      alt="Generated ID Card"
      className="w-full rounded-md shadow"
    />
-  <button
+  <button  
           onClick={handleDownload}
           className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+          type="button" id="secondaryButton"
         >
           Download Image
         </button>
  </div>
 )
 }
-</form>
-
-
- </>
+</>
   );
 };
 

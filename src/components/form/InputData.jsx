@@ -51,12 +51,6 @@ useEffect(() => {
     return () => clearInterval(timer); // Cleanup timer when component unmounts
   }
 }, [loading]);
-
-
-
-
-
-
   // Function to handle image download
   const handleDownload = async () => {
     try {
@@ -185,7 +179,7 @@ const [error, setError] = useState("");
 
     try {
       setloading(true)
-      const response = await axios.post(`http://localhost:8000/api/v1/${req}`, formDataToSend, {
+      const response = await axios.post(`https://samajwadi-backend-production.onrender.com/api/v1/${req}`, formDataToSend, {
           headers: { 'Content-Type': 'multipart/form-data' }
       });
       setGeneratedCardUrl(response.data.imageUrl);

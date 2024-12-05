@@ -61,7 +61,7 @@ function Footer() {
     <div className='min-h-12  flex flex-col bg-red-900 inset-0  justify-center items-center'>
     <p className='p-3'>&copy; 2024 samajwadiparty.in</p>
         <h1 className="text-center pb-3">
-            made with ❤ by <a href='https://navneet.website/'><span className=''>Navneet</span></a>
+            made with ❤ by <a href='https://x.com/get2Navneet'><span className=''>Navneet</span></a>
         </h1>
     </div>
 </footer>

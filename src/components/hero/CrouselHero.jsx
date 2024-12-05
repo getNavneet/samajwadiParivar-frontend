@@ -59,7 +59,6 @@ const HeroCarousel = () => {
 
  
   const cardData = [
-
     { image: newsp1t, title: "use this template", id: "newsp1"  },
     { image: newsp4t, title: "use this template", id: "newsp4"  },
     { image: newsp5t, title: "use this template", id: "newsp5"  },
@@ -69,7 +68,6 @@ const HeroCarousel = () => {
     { image: navneet8t, title: "use this template", id: "navneet8"  },
     { image: navneet10t, title: "use this template", id: "navneet10"  },
     { image: newsp7t, title: "use this template", id: "newsp7"  },
-
     { image: newsp8t, title: "use this template", id: "newsp8"  },
     { image: newsp9t, title: "use this template", id: "newsp9"  },
     { image: newsp10t, title: "use this template", id: "newsp10"  },

@@ -27,4 +27,11 @@
      color: rgb(0, 150, 180);    /* Set the color of the arrow icon */
      opacity: 1;      /* Ensure full opacity */
    }
+
+   @media only screen and (max-width: 600px) {
+    .slick-dots {
+      bottom: -50px; /* Position dots inside the carousel */
+    }
+    
+  }
   

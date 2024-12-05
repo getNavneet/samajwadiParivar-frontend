@@ -13,17 +13,23 @@ import newsp10t from "../../assets/newsp10template.png"
 import newcommon1t from "../../assets/newcommon1template.png"
 import newcommon2t from "../../assets/newcommon2template.png"
 import newcommon3t from "../../assets/newcommon3template.png"
-
+import navneet2t from "../../assets/navneet2template.png"
+import navneet3t from "../../assets/navneet3template.png"
+import navneet8t from "../../assets/navneet8template.png"
+import navneet10t from "../../assets/navneet10template.png"
 
 
 function AllCardsGrid() {
 
   const cardData = [
-
-    { image: newsp1t, title: "use this template", id: "newsp"  },
+    { image: newsp1t, title: "use this template", id: "newsp1"  },
     { image: newsp4t, title: "use this template", id: "newsp4"  },
     { image: newsp5t, title: "use this template", id: "newsp5"  },
     { image: newsp6t, title: "use this template", id: "newsp6"  },
+    { image: navneet2t, title: "use this template", id: "navneet2"  },
+    { image: navneet3t, title: "use this template", id: "navneet3"  },
+    { image: navneet8t, title: "use this template", id: "navneet8"  },
+    { image: navneet10t, title: "use this template", id: "navneet10"  },
     { image: newsp7t, title: "use this template", id: "newsp7"  },
     { image: newsp8t, title: "use this template", id: "newsp8"  },
     { image: newsp9t, title: "use this template", id: "newsp9"  },

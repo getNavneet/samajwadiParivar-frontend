@@ -4,7 +4,7 @@ import poster from "../../assets/hero.png"
 import AllCardsGrid from "../cardHolder/AllCardsGrid"
 import Button from "../../Button";
 import { useDispatch } from "react-redux";
-import {updateString } from '../Store';
+import {toggleBoolean,updateString } from '../Store';
 import FormComponent from "../form/InputData";
 import { useSelector } from "react-redux";
 
@@ -15,6 +15,7 @@ const Home=()=>{
 
   const handleButtonClick = () => {
     dispatch(updateString("member")); // Update the string value
+    dispatch(toggleBoolean())
   };
 return(
 

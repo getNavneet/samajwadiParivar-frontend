@@ -24,6 +24,7 @@ const statesAndCities = {
 const FormComponent = () => {
  
   const templateId = useSelector((state) => state.appState.stringValue); //access template id
+  const isTrue = useSelector((state) => state.appState.isTrue); //access template id
   const [req,setReq]=useState("")
   const [loading,setloading]=useState(false)
   const ref = useRef(null);
@@ -98,7 +99,7 @@ useEffect(() => {
         setReq("member");  
        }
       }
-    }, [templateId]);
+    }, [templateId,isTrue]);
 
 
   const [formData, setFormData] = useState({

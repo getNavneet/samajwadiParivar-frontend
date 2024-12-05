@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from "../../Button";
 import { useDispatch } from "react-redux";
-import { setTrue,updateString } from '../Store'; // Import actions
+import { toggleBoolean,updateString } from '../Store'; // Import actions
 
 
   const GreetingCard = ({image,title,id}) => {
@@ -9,7 +9,7 @@ import { setTrue,updateString } from '../Store'; // Import actions
     const dispatch = useDispatch();
     const handleButtonClick = (cardId) => {
       // setSelectedCardId(cardId);
-      dispatch(setTrue()); // Set the boolean state to true  
+      dispatch(toggleBoolean()); // Set the boolean state to true  
       dispatch(updateString(cardId)); // Update the string value
       // dispatch(setFalse()); 
     };

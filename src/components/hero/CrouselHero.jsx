@@ -28,7 +28,7 @@ const HeroCarousel = () => {
   
   // Slick settings for the carousel
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     autoplay: true, // Enable autoplay

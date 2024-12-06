@@ -4,10 +4,10 @@ import axios from "axios";
 import "./loader.css";
 const statesAndCities = {
   "Uttar Pradesh": [
-    "Agra", "Aligarh", "Allahabad (Prayagraj)", "Ambedkar Nagar", "Amethi", "Amroha", "Auraiya", 
+    "Agra", "Aligarh", "Prayagraj", "Ambedkar Nagar", "Amethi", "Amroha", "Auraiya", 
     "Azamgarh", "Baghpat", "Bahraich", "Ballia", "Balrampur", "Banda", "Barabanki", "Bareilly", 
     "Basti", "Bijnor", "Budaun", "Bulandshahr", "Chandauli", "Chitrakoot", "Deoria", "Etah", 
-    "Etawah", "Faizabad (Ayodhya)", "Farrukhabad", "Fatehpur", "Firozabad", "Gautam Buddha Nagar (Noida)", 
+    "Etawah", "Faizabad (Ayodhya)", "Farrukhabad", "Fatehpur", "Firozabad", "Noida", 
     "Ghaziabad", "Ghazipur", "Gonda", "Gorakhpur", "Hamirpur", "Hapur", "Hardoi", "Hathras", 
     "Jaunpur", "Jhansi", "Kannauj", "Kanpur", "Kasganj", "Kaushambi", "Kushinagar", "Lakhimpur Kheri", 
     "Lalitpur", "Lucknow", "Maharajganj", "Mahoba", "Mainpuri", "Mathura", "Mau", "Meerut", 
@@ -54,28 +54,36 @@ useEffect(() => {
   // Function to handle image download
   const handleDownload = async () => {
     try {
-      setloading(false)
+    
+  
       // Fetch the image as a Blob
       const response = await fetch(generatedCardUrl);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
       const blob = await response.blob();
-
+  
       // Create a temporary URL for the Blob
       const blobUrl = URL.createObjectURL(blob);
-
-      // Create a link and trigger the download
+  
+      // Create a link element
       const link = document.createElement("a");
       link.href = blobUrl;
-      link.download = "IDCard.png"; // Desired file name
+      link.download = `${formData.name}.png`; // Desired file name
+  
+      // Trigger the download
       document.body.appendChild(link);
       link.click();
-
+  
       // Cleanup
       document.body.removeChild(link);
       URL.revokeObjectURL(blobUrl);
     } catch (error) {
       console.error("Failed to download image:", error);
-    }
-  };
+      alert("An error occurred while downloading the image. Please try again.");
+    } 
+  }
 
 
   

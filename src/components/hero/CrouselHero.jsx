@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Hero.css"; // Custom styles
+import "./hero.css"; // Custom styles
 import GreetingCard from "../cardHolder/GreetingCard";
 import newsp1t from "../../assets/newsp1template.png"
 import newsp2t from "../../assets/newsp2template.png"
@@ -28,7 +28,7 @@ const HeroCarousel = () => {
   
   // Slick settings for the carousel
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     autoplay: true, // Enable autoplay
